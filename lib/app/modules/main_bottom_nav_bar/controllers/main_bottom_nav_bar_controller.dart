@@ -1,3 +1,4 @@
+import 'package:aqua/app/modules/account/views/account_view.dart';
 import 'package:aqua/app/modules/history/views/history_view.dart';
 import 'package:aqua/app/modules/home/views/home_view.dart';
 import 'package:get/get.dart';
@@ -26,7 +27,7 @@ class MainBottomNavBarController extends GetxController {
       case 3:
         return const HistoryView();
       default:
-        return const HistoryView();
+        return const AccountView();
     }
   }
 

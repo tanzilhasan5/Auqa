@@ -1,23 +1,15 @@
 import 'package:get/get.dart';
-
+import '../model/history_model.dart';
 class HistoryController extends GetxController {
-  //TODO: Implement HistoryController
+  // Outer list (Category)
+  final outerList = ["Morning", "Afternoon", "Evening"].obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  // Inner list (Water history item)
+  final innerList = <HistoryModel>[
+    HistoryModel(title: "Water", time: "6:50 AM", amount: "300 ml"),
+    HistoryModel(title: "Water", time: "9:15 AM", amount: "250 ml"),
+    HistoryModel(title: "Water", time: "12:30 PM", amount: "400 ml"),
+    HistoryModel(title: "Water", time: "3:20 PM", amount: "300 ml"),
+    HistoryModel(title: "Water", time: "5:00 PM", amount: "350 ml"),
+  ].obs;
 }

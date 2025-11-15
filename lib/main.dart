@@ -13,7 +13,7 @@ void main() {
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme:  ThemeData(
-          scaffoldBackgroundColor: Colors.white70,
+          scaffoldBackgroundColor: Color(0xffF2F2F2),
           textTheme: GoogleFonts.interTextTheme(),
         ),
 
