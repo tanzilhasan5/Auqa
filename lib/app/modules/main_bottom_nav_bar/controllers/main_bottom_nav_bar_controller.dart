@@ -1,3 +1,4 @@
+import 'package:aqua/app/modules/Achievements/views/achievements_view.dart';
 import 'package:aqua/app/modules/account/views/account_view.dart';
 import 'package:aqua/app/modules/history/views/history_view.dart';
 import 'package:aqua/app/modules/home/views/home_view.dart';
@@ -25,7 +26,7 @@ class MainBottomNavBarController extends GetxController {
       case 2:
         return const HistoryView();
       case 3:
-        return const HistoryView();
+        return const AchievementsView();
       default:
         return const AccountView();
     }
@@ -33,6 +34,6 @@ class MainBottomNavBarController extends GetxController {
 
   void changePage(int index) {
     selectedIndex = index;
-    update(); // This triggers GetBuilder to rebuild
+    update();
   }
 }

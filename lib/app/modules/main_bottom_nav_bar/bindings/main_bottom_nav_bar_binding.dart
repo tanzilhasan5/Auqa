@@ -1,5 +1,7 @@
+import 'package:aqua/app/modules/account/controllers/account_controller.dart';
 import 'package:get/get.dart';
 
+import '../../Achievements/controllers/achievements_controller.dart';
 import '../../history/controllers/history_controller.dart';
 import '../controllers/main_bottom_nav_bar_controller.dart';
 
@@ -11,6 +13,9 @@ class MainBottomNavBarBinding extends Bindings {
     );
     Get.lazyPut<HistoryController>(
           () => HistoryController(),
+    );
+    Get.lazyPut<AchievementsController>(
+          () => AchievementsController(),
     );
   }
 }

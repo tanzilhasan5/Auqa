@@ -15,6 +15,15 @@ abstract class Routes {
   static const SUBSCRIPTION = _Paths.SUBSCRIPTION;
 /*  static const SELECTIONSHEET = _Paths.SELECTIONSHEET;*/
   static const ACHIEVEMENTS = _Paths.ACHIEVEMENTS;
+  static const frist_vectory = _Paths.frist_vectory;
+  static const CoolRefresher  = _Paths.CoolRefresher ;
+  static const AquaSovereign  = _Paths.AquaSovereign ;
+  static const WeeklyLegend   = _Paths.WeeklyLegend ;
+  static const Hero   = _Paths.Hero ;
+  static const Immortal   = _Paths.Immortal;
+  static const PerfectMonth   = _Paths.PerfectMonth;
+  static const EarlyBirdElite   = _Paths.EarlyBirdElite;
+  static const WeekWarrior    = _Paths.WeekWarrior;
 }
 
 abstract class _Paths {
@@ -31,4 +40,13 @@ abstract class _Paths {
   static const SUBSCRIPTION = '/SUBSCRIPTION';
 /*  static const SELECTIONSHEET = '/gender_selectio';*/
   static const ACHIEVEMENTS = '/achievements';
+  static const frist_vectory = '/frist_vectory';
+  static const CoolRefresher = '/CoolRefresher';
+  static const AquaSovereign  = '/AquaSovereign';
+  static const WeeklyLegend  = '/WeeklyLegend';
+  static const Hero  = '/50LHero';
+  static const Immortal  = '/Immortal';
+  static const PerfectMonth  = '/PerfectMonth';
+  static const EarlyBirdElite  = '/EarlyBirdElite';
+  static const WeekWarrior   = '/WeekWarrior';
 }

@@ -1,7 +1,16 @@
+import 'package:aqua/app/modules/Achievements/views/%20weeklyLegend/weekly_Legend.dart';
+import 'package:aqua/app/modules/Achievements/views/Hero/hero.dart';
+import 'package:aqua/app/modules/Achievements/views/Immortal/immortal.dart';
+import 'package:aqua/app/modules/Achievements/views/PerfectMonth/perfectMonth.dart';
+import 'package:aqua/app/modules/Achievements/views/WeekWarrior/weekWarrior.dart';
+import 'package:aqua/app/modules/Achievements/views/aquaSovereign/aquaSovereign.dart';
+import 'package:aqua/app/modules/Achievements/views/earlyBirdElite/earlyBirdElite.dart';
 import 'package:get/get.dart';
 
 import '../modules/Achievements/bindings/achievements_binding.dart';
 import '../modules/Achievements/views/achievements_view.dart';
+import '../modules/Achievements/views/coolRefresher/cool_refresher.dart';
+import '../modules/Achievements/views/frist_vectory/frist_vectory.dart';
 import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/DailyGoal/daily_Goal.dart';
 import '../modules/account/views/DailyGoal/edit_gole.dart';
@@ -80,5 +89,51 @@ class AppPages {
       page: () => const AchievementsView(),
       binding: AchievementsBinding(),
     ),
+    GetPage(
+      name: _Paths.frist_vectory,
+      page: () =>  FristVectory(),
+
+    ),
+    GetPage(
+      name: _Paths.Hero,
+      page: () =>  Hero(),
+
+    ),
+    GetPage(
+      name: _Paths.AquaSovereign,
+      page: () =>  AquaSovereign(),
+
+    ),
+    GetPage(
+      name: _Paths.Immortal,
+      page: () =>  Immortal(),
+
+    ),
+    GetPage(
+      name: _Paths.WeekWarrior,
+      page: () =>  WeekWarrior(),
+
+    ),
+    GetPage(
+      name: _Paths.CoolRefresher,
+      page: () =>  CoolRefresher(),
+
+    ),
+    GetPage(
+      name: _Paths.WeeklyLegend,
+      page: () =>  WeeklyLegend(),
+
+    ),
+    GetPage(
+      name: _Paths.PerfectMonth,
+      page: () =>  PerfectMonth(),
+
+    ),
+    GetPage(
+      name: _Paths.EarlyBirdElite,
+      page: () =>  EarlyBirdElite(),
+
+    ),
+
   ];
 }

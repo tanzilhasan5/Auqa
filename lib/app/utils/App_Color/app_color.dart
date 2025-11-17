@@ -4,5 +4,6 @@ class AppColor{
   static Color cardcolor= Color(0xffFFFFFF);
   static Color primarryColor= Color(0xff369FFF);
   static Color amber= Color(0xffFDC109);
+  static Color bg =Color(0xffDEEFFF);
 
 }

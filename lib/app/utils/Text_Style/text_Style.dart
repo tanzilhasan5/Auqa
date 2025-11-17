@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
-  // ====================
-  // HEADINGS
-  // ====================
-
-  // H1 - Extra Large Heading
   static TextStyle title26_w600({Color? color}) => GoogleFonts.inter(
     fontSize: 26,
     fontWeight: FontWeight.w600,
@@ -23,6 +18,8 @@ class AppTextStyles {
   static TextStyle title16_w400({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w400,fontSize: 16,color: color);
   static TextStyle title10_w500({Color? color}) => GoogleFonts.inter(fontSize: 10, fontWeight: FontWeight.w500,color: color);
   static TextStyle title12_w400({Color? color}) => GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w400,color: color);
+  static TextStyle title12_w600({Color? color}) => GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w600,color: color);
+  static TextStyle title20_w600({Color? color}) => GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.w600,color: color);
 
 }
 

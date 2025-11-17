@@ -1,10 +1,44 @@
 import 'package:aqua/app/utils/Text_Style/text_Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../reuse_widgets/selection.dart';
 import '../../../../utils/App_Color/app_color.dart';
 
-class PersonalInfo extends StatelessWidget {
+class PersonalInfo extends StatefulWidget {
   const PersonalInfo({super.key});
+
+  @override
+  State<PersonalInfo> createState() => _PersonalInfoState();
+}
+
+class _PersonalInfoState extends State<PersonalInfo> {
+
+/*  String selected = "Meal";
+
+  final List<String> myActions = [
+    "Edit",
+    "Share",
+    "Delete",
+    "seufuy",
+    "asiuhiufhiue",
+    "iuheiri","ir9ireh"
+
+  ];
+
+  void _openSheet() async {
+    final result = await CustomCupertinoActionSheet.show(
+      context: context,
+      actions: myActions,
+      title: "Choose Something",
+      selectedValue: selected,
+    );
+
+    if (result != null) {
+      setState(() {
+        selected = result;
+      });
+    }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +67,16 @@ class PersonalInfo extends StatelessWidget {
               children: [
 
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    openSheet();
+
+
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Gender',style: AppTextStyles.title16_w600(),),
-                      Text('Male',style: AppTextStyles.title14_w500(
+                      Text(gender,style: AppTextStyles.title14_w500(
                           color: AppColor.primarryColor
                       ),),
 
@@ -137,4 +175,23 @@ class PersonalInfo extends StatelessWidget {
       ),
     );
   }
+
+
+  String gender = "Male";
+
+  void openSheet() async {
+    final result = await CustomCupertinoActionSheet.show(
+      context: context,
+      title: "Gender",
+      actions: ["Male", "Female", "Prefer not to say","Male", "Female", "Prefer not to say",],
+      selectedValue: gender,
+    );
+
+    if (result != null) {
+      setState(() {
+        gender = result;
+      });
+    }
+  }
+
 }

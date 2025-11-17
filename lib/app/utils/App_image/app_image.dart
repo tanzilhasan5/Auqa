@@ -23,3 +23,17 @@ class Icn{
 
 
 }
+class achivment{
+  static const String Hero= 'assets/achivmentIcon/LHero.png';
+  static const String AquaSovereign= 'assets/achivmentIcon/AquaSovereign.png';
+  static const String cool= 'assets/achivmentIcon/cool.png';
+  static const String early= 'assets/achivmentIcon/early.png';
+  static const String fristVectory= 'assets/achivmentIcon/fristVectory.png';
+  static const String Immortal= 'assets/achivmentIcon/Immortal.png';
+  static const String perfect= 'assets/achivmentIcon/perfect.png';
+  static const String weekly= 'assets/achivmentIcon/weekly.png';
+  static const String Weekly_Legend= 'assets/achivmentIcon/Weekly_Legend.png';
+}
+class achImg{
+  static const String fristvactor ='assets/achivmentImg/frist_vactor.png';
+}
