@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../../utils/Text_Style/text_Style.dart';
 
 class AchievementProgressCircle extends StatelessWidget {
   final double progress;

@@ -1,4 +1,3 @@
-import 'package:aqua/app/modules/account/controllers/account_controller.dart';
 import 'package:get/get.dart';
 
 import '../../Achievements/controllers/achievements_controller.dart';

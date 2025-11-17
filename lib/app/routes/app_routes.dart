@@ -24,6 +24,7 @@ abstract class Routes {
   static const PerfectMonth   = _Paths.PerfectMonth;
   static const EarlyBirdElite   = _Paths.EarlyBirdElite;
   static const WeekWarrior    = _Paths.WeekWarrior;
+  static const Reminders    = _Paths.Reminders;
 }
 
 abstract class _Paths {
@@ -49,4 +50,5 @@ abstract class _Paths {
   static const PerfectMonth  = '/PerfectMonth';
   static const EarlyBirdElite  = '/EarlyBirdElite';
   static const WeekWarrior   = '/WeekWarrior';
+  static const Reminders   = '/Reminders';
 }

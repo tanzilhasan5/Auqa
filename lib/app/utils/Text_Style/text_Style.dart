@@ -13,6 +13,7 @@ class AppTextStyles {
     color: color,
   );
   static TextStyle title16_w500({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w500,fontSize: 16,color: color);
+  static TextStyle title20_w500({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w500,fontSize: 20,color: color);
   static TextStyle title16_w800({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w800,fontSize: 16,color: color);
   static TextStyle title16_w600({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w600,fontSize: 16,color: color);
   static TextStyle title16_w400({Color? color}) => GoogleFonts.inter(fontWeight: FontWeight.w400,fontSize: 16,color: color);

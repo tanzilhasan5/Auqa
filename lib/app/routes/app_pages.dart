@@ -5,6 +5,7 @@ import 'package:aqua/app/modules/Achievements/views/PerfectMonth/perfectMonth.da
 import 'package:aqua/app/modules/Achievements/views/WeekWarrior/weekWarrior.dart';
 import 'package:aqua/app/modules/Achievements/views/aquaSovereign/aquaSovereign.dart';
 import 'package:aqua/app/modules/Achievements/views/earlyBirdElite/earlyBirdElite.dart';
+import 'package:aqua/app/modules/account/views/Reminders/reminders.dart';
 import 'package:get/get.dart';
 
 import '../modules/Achievements/bindings/achievements_binding.dart';
@@ -132,6 +133,11 @@ class AppPages {
     GetPage(
       name: _Paths.EarlyBirdElite,
       page: () =>  EarlyBirdElite(),
+
+    ),
+    GetPage(
+      name: _Paths.Reminders,
+      page: () =>  Reminders(),
 
     ),
 
