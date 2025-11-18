@@ -1,5 +1,6 @@
 import 'package:aqua/app/modules/Achievements/views/achievements_view.dart';
 import 'package:aqua/app/modules/account/views/account_view.dart';
+import 'package:aqua/app/modules/dashbord/views/dashbord_view.dart';
 import 'package:aqua/app/modules/history/views/history_view.dart';
 import 'package:aqua/app/modules/home/views/home_view.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class MainBottomNavBarController extends GetxController {
       case 0:
         return const HistoryView();
       case 1:
-        return const HistoryView();
+        return const DashbordView();
       case 2:
         return const HomeView();
       case 3:

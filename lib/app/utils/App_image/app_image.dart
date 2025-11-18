@@ -7,6 +7,7 @@ class  Img{
   static const String juce = 'assets/image/juice.png';
   static const String coffee = 'assets/image/coffee.png';
   static const String upgrade = 'assets/image/upgrade.png';
+  static const String berchartbg = 'assets/image/ber_chart_bg.png';
 
 }
 class Icn{
@@ -36,4 +37,14 @@ class achivment{
 }
 class achImg{
   static const String fristvactor ='assets/achivmentImg/frist_vactor.png';
+}
+class svgImage{
+  static const String home ='assets/svgIcon/home.svg';
+  static const String analytics ='assets/svgIcon/analytics.svg';
+  static const String achievements ='assets/svgIcon/achivment.svg';
+  static const String person ='assets/svgIcon/user.svg';
+  static const String history ='assets/svgIcon/history.svg';
+
+
+
 }

@@ -70,7 +70,8 @@ class AccountView extends GetView<AccountController> {
                   color: AppColor.cardcolor,
                   borderRadius: BorderRadius.circular(25),
                 ),
-                child: Column(
+                child:
+                /*Column(
                   children: [
                     ListTile(
                       
@@ -130,6 +131,83 @@ class AccountView extends GetView<AccountController> {
                       leading: ImageIcon(AssetImage(Icn.logout,),color: Colors.red,),
                       trailing: InkWell( onTap: (){},
                           child: Icon(Icons.arrow_forward_ios_rounded)),
+                    ),
+                  ],
+                )*/
+                Column(
+                  children: [
+                    // Personal Info
+                    InkWell(
+                      onTap: () => Get.toNamed(Routes.PERSONALINFO),
+                      child: ListTile(
+                        title: Text('Personal Info', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.person)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Reminders
+                    InkWell(
+                      onTap: () => Get.toNamed(Routes.Reminders),
+                      child: ListTile(
+                        title: Text('Reminders', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.reminders)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Daily Goal
+                    InkWell(
+                      onTap: () => Get.toNamed(Routes.DAILYGOAl),
+                      child: ListTile(
+                        title: Text('Daily Goal', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.dailyGole)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Language
+                    InkWell(
+                      onTap: () {
+                        // Add your language action here
+                      },
+                      child: ListTile(
+                        title: Text('Language', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.language)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Privacy Policy
+                    InkWell(
+                      onTap: () => Get.toNamed(Routes.PRIVACYPOLICY),
+                      child: ListTile(
+                        title: Text('Privacy Policy', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.privacyPolicy)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Subscription
+                    InkWell(
+                      onTap: () => Get.toNamed(Routes.SUBSCRIPTION),
+                      child: ListTile(
+                        title: Text('Subscription', style: AppTextStyles.title16_w500()),
+                        leading: ImageIcon(AssetImage(Icn.subscription)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+
+                    // Logout
+                    InkWell(
+                      onTap: () {
+                        // Add logout logic here
+                      },
+                      child: ListTile(
+                        title: Text('Logout', style: AppTextStyles.title16_w500(color: Colors.red)),
+                        leading: ImageIcon(AssetImage(Icn.logout), color: Colors.red),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
                   ],
                 )

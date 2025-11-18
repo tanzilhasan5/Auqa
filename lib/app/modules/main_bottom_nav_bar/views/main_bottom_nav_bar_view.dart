@@ -1,6 +1,7 @@
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../utils/App_image/app_image.dart';
 import '../controllers/main_bottom_nav_bar_controller.dart';
 
 class MainBottomNavBarView extends GetView<MainBottomNavBarController> {
@@ -11,30 +12,35 @@ class MainBottomNavBarView extends GetView<MainBottomNavBarController> {
     return Scaffold(
       body: GetBuilder<MainBottomNavBarController>(
         builder: (controller) => AnimatedSwitcher(
+
           switchInCurve: Curves.easeOut,
           switchOutCurve: Curves.easeIn,
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 200),
           child: controller.currentPage,
         ),
       ),
       bottomNavigationBar: GetBuilder<MainBottomNavBarController>(
         builder: (controller) => FluidNavBar(
 
+
           defaultIndex: controller.selectedIndex,
           animationFactor: 0.5,
           icons:  [
-            FluidNavBarIcon(icon: Icons.history),
-            FluidNavBarIcon(icon: Icons.analytics_outlined),
-            FluidNavBarIcon(icon: Icons.home_outlined),
-            FluidNavBarIcon(icon: Icons.currency_franc),
-            FluidNavBarIcon(icon: Icons.person_outline),
+            FluidNavBarIcon(svgPath: svgImage.history),
+            FluidNavBarIcon(svgPath: svgImage.analytics),
+            FluidNavBarIcon(svgPath: svgImage.home),
+            FluidNavBarIcon(svgPath: svgImage.achievements),
+            FluidNavBarIcon(svgPath: svgImage.person),
           ],
           onChange: (index) => controller.changePage(index),
-          style: const FluidNavBarStyle(
+          style:  FluidNavBarStyle(
+
             barBackgroundColor: Color(0xFF369FFF),
             iconBackgroundColor: Color(0xFF369FFF),
             iconSelectedForegroundColor: Colors.white,
             iconUnselectedForegroundColor: Colors.white,
+
+
           ),
         ),
       ),
