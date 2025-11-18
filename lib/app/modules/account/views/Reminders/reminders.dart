@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReminderModel {
   String time;
-  List<String> days; // Changed to support multiple days
+  List<String> days;
   bool isActive;
 
   ReminderModel({
@@ -89,7 +89,7 @@ class _RemindersState extends State<Reminders>
                   ),
                 ),
                 SizedBox(height: 30.h),
-                // Time Picker
+                ///<<<<< Time Picker>>>>>>
                 Container(
                   height: 200.h,
                   child: Row(
@@ -534,7 +534,7 @@ class _RemindersState extends State<Reminders>
                           );
                         },
                       ),
-                    ],
+                            ],
                   ),
                 ],
               ),
