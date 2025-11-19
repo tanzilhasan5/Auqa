@@ -12,7 +12,7 @@ class PerfectMonth extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.perfect,
           subtitle: 'Perfect Month',
           descriptionLine1: 'Unstoppable! 30 days of perfect hydration',
           descriptionLine2: '— amazing work!',

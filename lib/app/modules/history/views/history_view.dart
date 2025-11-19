@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../utils/App_image/app_image.dart';
-import '../Widgets/calender.dart';
-import '../Widgets/outercard.dart';
+import '../Widgets/calender/view/calender.dart';
+import '../Widgets/card/outercard.dart';
 import '../controllers/history_controller.dart';
 
 class HistoryView extends GetView<HistoryController> {
@@ -24,7 +24,7 @@ class HistoryView extends GetView<HistoryController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            /*Expanded(child: HistoryCalendar()),*/
+            HistoryCalendar(),
             Text(
               'Today, 7 October',
               style: AppTextStyles.title14_w500(color: Colors.black),

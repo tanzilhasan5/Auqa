@@ -12,7 +12,7 @@ class Hero extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.Hero,
           subtitle: '50L Hero',
           descriptionLine1: 'Awesome Work! 50 liters of pure',
           descriptionLine2: 'consistency — well done!',

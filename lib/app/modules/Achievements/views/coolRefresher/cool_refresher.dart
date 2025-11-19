@@ -12,7 +12,7 @@ class CoolRefresher extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.cool,
           subtitle: 'Cool Refresher ',
           descriptionLine1: 'Ice Legend! 10 chilled water intakes — your  ',
           descriptionLine2: 'coolness is unmatched!',

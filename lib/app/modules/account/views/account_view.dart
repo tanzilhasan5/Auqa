@@ -201,7 +201,7 @@ class AccountView extends GetView<AccountController> {
                     // Logout
                     InkWell(
                       onTap: () {
-                        // Add logout logic here
+                        _showCustomEditePicker(context);
                       },
                       child: ListTile(
                         title: Text('Logout', style: AppTextStyles.title16_w500(color: Colors.red)),
@@ -214,6 +214,102 @@ class AccountView extends GetView<AccountController> {
               )
         ]
         )
+    );
+  }
+  void _showCustomEditePicker(BuildContext context) {
+
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setModalState) {
+          return Container(
+            height: 262.h,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25.r),
+                topRight: Radius.circular(25.r),
+              ),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 62),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 25.h,),
+
+                      Text(
+                          'log out?',
+                          style: AppTextStyles.title20_w500(color: Colors.red)
+                      ),
+                      SizedBox(height: 25.h,),
+                      Text(
+                          'Are you sure you want to',
+                          style: AppTextStyles.title20_w500()
+                      ),
+                      Text(
+                          'log out?',
+                          style: AppTextStyles.title20_w500()
+                      ),
+                      SizedBox(height: 50.h,),
+                    ],
+                  ),
+                ),
+
+
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        height: 40.h,
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () => Get.back(),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey[200],
+                            elevation: 0,
+                            padding: EdgeInsets.symmetric(vertical: 12.h),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.r)),
+                          ),
+                          child: Text(
+                            'Cancel',
+                            style: TextStyle(color: AppColor.primarryColor, fontSize: 16.sp, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10.h,),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () => Get.back(),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColor.primarryColor,
+                            elevation: 0,
+                            padding: EdgeInsets.symmetric(vertical: 12.h),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.r)),
+                          ),
+                          child: Text(
+                            'Yes',
+                            style: TextStyle(color:Colors.white, fontSize: 16.sp, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15.w),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 30.h),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }

@@ -54,7 +54,7 @@ class AchievementsController extends GetxController {
 
     {
       "progress": "0.3",
-      "imagePath": "${achivment.Weekly_Legend}",
+      "imagePath": "${achivment.weekly}",
       "title": "Weekly Legend",
       "subtitle1": "Hit daily goals ",
       "subtitle2": "for 4 weeks.",

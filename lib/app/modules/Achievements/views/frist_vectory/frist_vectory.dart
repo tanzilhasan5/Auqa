@@ -12,7 +12,7 @@ class FristVectory extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.fristVectory,
           subtitle: 'Week Warrior',
           descriptionLine1: 'Congratulations! You’ve logged your first water ',
           descriptionLine2: 'the journey begins!',

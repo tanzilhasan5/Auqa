@@ -12,7 +12,7 @@ class Immortal extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.Immortal,
           subtitle: 'Immortal',
           descriptionLine1: 'Unbelievable! 365 days straight —',
           descriptionLine2: 'dedication is unmatched!',

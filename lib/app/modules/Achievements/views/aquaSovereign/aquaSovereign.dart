@@ -12,7 +12,7 @@ class AquaSovereign extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.AquaSovereign,
           subtitle: 'Aqua Sovereign',
           descriptionLine1: 'Goal Machine! You’ve hit 200 total goals —',
           descriptionLine2: 'unstoppable energy!',

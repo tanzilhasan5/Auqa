@@ -15,7 +15,7 @@ class EarlyBirdElite extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.early,
           subtitle: 'Early Bird Elite ',
           descriptionLine1: 'Awesome! You’ve started your days the ',
           descriptionLine2: 'right way — hydrated!',

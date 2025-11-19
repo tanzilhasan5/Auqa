@@ -28,7 +28,7 @@ class EditGoal extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 185.h,),
+            SizedBox(height: 186.h,),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

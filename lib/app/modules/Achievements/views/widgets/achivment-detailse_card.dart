@@ -31,7 +31,7 @@ class Achivment_details_card extends StatelessWidget {
             Get.back();
           },
             child: Icon(Icons.cancel_outlined)),
-        Image(image: AssetImage(achImg.fristvactor)),
+        Center(child: Image(image: AssetImage(imagePath) ,fit: BoxFit.cover,)),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

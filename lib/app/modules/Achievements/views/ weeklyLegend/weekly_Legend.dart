@@ -12,7 +12,7 @@ class WeeklyLegend extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.Legend,
           subtitle: ' Weekly Legend',
           descriptionLine1: 'Consistency Champ! 4 weeks of daily goals',
           descriptionLine2: '— you crushed it!',

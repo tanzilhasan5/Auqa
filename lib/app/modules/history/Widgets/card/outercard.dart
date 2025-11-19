@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../utils/App_Color/app_color.dart';
-import '../../../utils/Text_Style/text_Style.dart';
-import '../model/history_model.dart';
+import '../../../../utils/App_Color/app_color.dart';
+import '../../../../utils/Text_Style/text_Style.dart';
+import '../../model/history_model.dart';
 import 'innercard.dart';
 
 class OuterCard extends StatelessWidget {

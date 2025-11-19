@@ -1,5 +1,8 @@
+import 'package:aqua/app/modules/dashbord/views/widgets/drinking_Completition/drink_completition.dart';
+import 'package:aqua/app/modules/dashbord/views/widgets/hydrate/hydrate.dart';
 import 'package:aqua/app/utils/App_Color/app_color.dart';
 import 'package:aqua/app/utils/App_image/app_image.dart';
+import 'package:aqua/app/utils/Text_Style/text_Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,132 +16,192 @@ class DashbordView extends GetView<DashbordController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF2F2F2),
       appBar:  AppBar(
+
         leading: BackButton(color: AppColor.primarryColor),
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text('Personal Info'),
+        title: const Text('Analytics'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          /*decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(Img.berchartbg),
-            )
-          ),*/
-          height: 339.h,
+      body: SingleChildScrollView(
+        primary: false,
+        child: Padding(
+          padding: const EdgeInsets.all(19),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColor.cardcolor,
+                ),
+                height: 339.h,
+                  width: 336.w,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Drink Completion',style: AppTextStyles.title16_w500(color: AppColor.primarryColor),),
+                            ImageIcon(AssetImage(Icn.analetics,),color: AppColor.primarryColor,)
+                          ],
+                        ),
+                        SizedBox(height: 30.h),
+                        DrinkCompletionChart(),
+                      ],
+                    ),
+                  )),
+              SizedBox(height: 30.h,),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColor.cardcolor,
+                ),
+                height: 339.h,
+                  width: 336.w,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Hydrate',style: AppTextStyles.title16_w500(color: AppColor.primarryColor),),
+                            ImageIcon(AssetImage(Icn.analetics,),color: AppColor.primarryColor,)
+                          ],
+                        ),
+                        SizedBox(height: 30.h),
+                        Hydrate(),
+                      ],
+                    ),
+                  )),
+              SizedBox(height: 30.h,),
+          Container(
+
+            height: 234.h,
             width: 336.w,
-            child: DrinkCompletionChart()),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: AppColor.cardcolor,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Drink Type',),
+                  SizedBox(height: 20.h,),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 150.h,
+                          width: 150.w,
+                          child: AspectRatio(
+                            aspectRatio: 1.5,
+                            child: PieChart(
+                              PieChartData(
+                                pieTouchData: PieTouchData(
+                                  enabled: true,
+                                ),
+                                sections: [
+
+                                  PieChartSectionData(value: 70,color: AppColor.primarryColor,showTitle: false),
+                                  PieChartSectionData(value: 10,color: Color(0xffFE9017),showTitle: false),
+                                  PieChartSectionData(value: 10,color: Color(0xff7E5317),showTitle: false),
+                                  PieChartSectionData(value: 5,color: Color(0xffFFEB3C),showTitle: false),
+                                ]
+
+                              ),
+                              duration: Duration(milliseconds: 150),
+                            ),
+                          ),
+                        ),
+
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 20,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: AppColor.primarryColor
+                                  ),
+                                ),
+                                 SizedBox(width: 10.w,),Text('Water (70%)'),
+                              ],
+                            ),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 20,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: Color(0xff7E5317)
+                                  ),
+                                ),
+                                 SizedBox(width: 10.w,),Text('Water (70%)'),
+                              ],
+                            ),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 20,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: Color(0xffFE9017)
+                                  ),
+                                ),
+                                SizedBox(width: 10.w,),Text('Water (70%)'),
+                              ],
+                            ),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 20,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: Color(0xffFFEB3C)
+                                  ),
+                                ),
+                                SizedBox(width: 10.w,),Text('Water (70%)'),
+                              ],
+                            ),
+                            SizedBox(height: 16,),
+
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+            ],
+          ),
+        ),
       )   );
   }
 }
 
-class DrinkCompletionChart extends StatelessWidget {
-  const DrinkCompletionChart({super.key});
-
-  final List<double> drinkPercentages = const [
-    100,
-    25,
-    60,
-    85,
-    100,
-    45,
-    65
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.5,
-      child: BarChart(
-        BarChartData(
-          alignment: BarChartAlignment.spaceAround,
-          maxY: 100,
 
 
-          minY: 0,
-          gridData: const FlGridData(show: false),
-          borderData: FlBorderData(show: false),
-          titlesData: FlTitlesData(
-            topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            leftTitles: AxisTitles(
-              sideTitles: SideTitles(
-                showTitles: true,
-                reservedSize: 40.w,
-                interval: 20,
-                getTitlesWidget: (value, meta) {
-                  return Text(
-                    '${value.toInt()}%',
-                    style: TextStyle(color: Colors.black54, fontSize: 13.sp),
-                  );
-                },
-              ),
-            ),
-            bottomTitles: AxisTitles(
-              sideTitles: SideTitles(
-                showTitles: true,
-                getTitlesWidget: (value, meta) {
-                  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(days[value.toInt()],
-                        style: const TextStyle(fontSize: 12)),
-                  );
-                },
-              ),
-            ),
-          ),
-          barGroups: drinkPercentages.asMap().entries.map((entry) {
-            int index = entry.key;
-            double value = entry.value;
-
-            bool isHighlighted = index == 2;
 
 
-            return BarChartGroupData(
-              x: index,
-              barRods: [
-                BarChartRodData(
-                  toY: value,
-                  color: isHighlighted
-                      ? const Color(0xFF4A90E2)
-                      : const Color(0xFF9FD1FF),
-                  width: 30,
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(25)),
-                ),
-              ],
-              showingTooltipIndicators: isHighlighted ? [0] : [],
-            );
-          }).toList(),
-          barTouchData: BarTouchData(
-            enabled: false,
-            touchTooltipData: BarTouchTooltipData(
 
-            tooltipBorderRadius: BorderRadius.circular(30),
-            tooltipBorder: BorderSide(
-              color: AppColor.primarryColor,
-
-              width: 2
-            ),
-              getTooltipItem: (group, groupIndex, rod, rodIndex) {
-                if (group.x == 2) {
-
-                  return BarTooltipItem(
-
-                    '60%',
-                    const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-
-                  );
-                }
-                return null;
-              },
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 

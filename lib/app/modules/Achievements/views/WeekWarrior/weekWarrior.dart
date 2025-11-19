@@ -12,7 +12,7 @@ class WeekWarrior extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(26),
         child: Achivment_details_card(
-          imagePath: achImg.fristvactor,
+          imagePath: achImg.weekly,
           subtitle: 'Frist Victory',
           descriptionLine1: 'Amazing! You’ve stayed hydrated for',
           descriptionLine2: '7 days straight!',
