@@ -38,7 +38,7 @@ class AchievementsView extends GetView<AchievementsController> {
               ],
             ),
           ),
-          SizedBox(height: 30,),
+
           Padding(
             padding: const EdgeInsets.all(8),
             child:
