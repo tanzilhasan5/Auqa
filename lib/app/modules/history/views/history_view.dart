@@ -3,7 +3,6 @@ import 'package:aqua/app/utils/Text_Style/text_Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../../utils/App_image/app_image.dart';
 import '../Widgets/calender/view/calender.dart';
 import '../Widgets/card/outercard.dart';
 import '../controllers/history_controller.dart';
@@ -14,38 +13,52 @@ class HistoryView extends GetView<HistoryController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('History'),
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(19),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-
-            HistoryCalendar(),
-            Text(
-              'Today, 7 October',
-              style: AppTextStyles.title14_w500(color: Colors.black),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 374,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25.r),
+              color: AppColor.cardcolor
             ),
-            SizedBox(height: 20.h),
-
-            Expanded(
-              child: Obx(() => ListView.builder(
-                padding: EdgeInsets.zero,
-                itemCount: controller.outerList.length,
-                itemBuilder: (_, index) {
-                  return
-                    OuterCard(
-                    title: controller.outerList[index],
-                    logs: controller.innerList,
+            child: Column(
+              children: [
+                SizedBox(height: 44.h,),
+                Text('History'),
+                HistoryCalendar(),
+              ],
+            ),
+          ),
+          SizedBox(height: 20.h),
+      
+          Expanded(
+            child: Obx(() => ListView.builder(
+              padding: EdgeInsets.zero,
+              itemCount: controller.outerList.length,
+              itemBuilder: (_, index) {
+                return
+                  Padding(
+                    padding: const EdgeInsets.all(19),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Today, 7 October',
+                          style: AppTextStyles.title14_w500(color: Colors.black),
+                        ),
+                        SizedBox(height: 10.h,),
+                        OuterCard(
+                        title: controller.outerList[index],
+                        logs: controller.innerList,
+                                        ),
+                      ],
+                    ),
                   );
-                },
-              )),
-            ),
-          ],
-        ),
+              },
+            )),
+          ),
+        ],
       ),
     );
   }

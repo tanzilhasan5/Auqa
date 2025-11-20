@@ -9,5 +9,7 @@ class HistoryController extends GetxController {
     HistoryModel(title: "Water", time: "12:30 PM", amount: "400 ml"),
     HistoryModel(title: "Water", time: "3:20 PM", amount: "300 ml"),
     HistoryModel(title: "Water", time: "5:00 PM", amount: "350 ml"),
+    HistoryModel(title: "Water", time: "5:00 PM", amount: "350 ml"),
+    HistoryModel(title: "Water", time: "5:00 PM", amount: "350 ml"),
   ].obs;
 }

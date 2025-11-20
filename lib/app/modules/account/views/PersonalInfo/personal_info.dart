@@ -42,18 +42,19 @@ class _PersonalInfoState extends State<PersonalInfo> {
         title: const Text('Personal Info'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 20),
         child: Container(
-          height: 339.h,
+          height: 360.h,
           width: 336.w,
           decoration: BoxDecoration(
             color: AppColor.cardcolor,
             borderRadius: BorderRadius.circular(25),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(25),
+            padding:  EdgeInsets.symmetric(horizontal: 25.w,vertical: 25.w),
             child: Column(
               children: [
+
 
                 InkWell(
                   onTap:_showCustomGenderPicker,

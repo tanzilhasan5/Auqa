@@ -2,7 +2,8 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../utils/App_Color/app_color.dart';
+import '../../../../../../utils/App_Color/app_color.dart';
+
 class Hydrate extends StatelessWidget {
   final List<double> drinkPercentages = const [
     2.5,
@@ -81,8 +82,9 @@ class Hydrate extends StatelessWidget {
             );
           }).toList(),
           barTouchData: BarTouchData(
-            enabled: false,
+            enabled: true,
             touchTooltipData: BarTouchTooltipData(
+              direction: TooltipDirection.auto,
 
               tooltipBorderRadius: BorderRadius.circular(30),
               tooltipBorder: BorderSide(

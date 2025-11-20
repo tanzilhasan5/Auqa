@@ -13,7 +13,7 @@ class MainBottomNavBarController extends GetxController {
   void onInit() {
     super.onInit();
     // Initialize with home page
-    selectedIndex = 2;
+    selectedIndex = 1;
   }
 
   Widget get currentPage {
@@ -21,7 +21,7 @@ class MainBottomNavBarController extends GetxController {
       case 0:
         return const HistoryView();
       case 1:
-        return const DashbordView();
+        return  DashbordView();
       case 2:
         return const HomeView();
       case 3:

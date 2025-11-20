@@ -25,7 +25,7 @@ class OuterCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: Padding(
-        padding: EdgeInsets.all(16.w),
+        padding: EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -35,7 +35,6 @@ class OuterCard extends StatelessWidget {
               style: AppTextStyles.title14_w500(color: Colors.black),
             ),
 
-            SizedBox(height: 10.h),
 
             /// Inner List
             ListView.builder(

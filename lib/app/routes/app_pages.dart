@@ -53,7 +53,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.DASHBORD,
-      page: () => const DashbordView(),
+      page: () =>  DashbordView(),
       binding: DashbordBinding(),
     ),
     GetPage(

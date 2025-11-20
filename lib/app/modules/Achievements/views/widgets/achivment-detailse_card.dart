@@ -36,7 +36,7 @@ class Achivment_details_card extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('You own', style: AppTextStyles.title26_w600()),
+            Text('You own', style: AppTextStyles.title20_w500()),
             SizedBox(width: 5),
             Text(
               subtitle,
@@ -53,14 +53,14 @@ class Achivment_details_card extends StatelessWidget {
           children: [
             Text(
               descriptionLine1,
-              style: AppTextStyles.title14_w500(),
+              style: AppTextStyles.title12_w600(),
             ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(descriptionLine2, style: AppTextStyles.title14_w500()),
+            Text(descriptionLine2, style: AppTextStyles.title12_w600()),
           ],
         ),
         Spacer(),

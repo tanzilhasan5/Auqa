@@ -93,10 +93,11 @@ class AchievementProgressCircle extends StatelessWidget {
           SizedBox(height: 10,),
 
           Expanded(child: Text(title,style: TextStyle(
+            fontSize: 12,
             fontWeight: FontWeight.bold
           ),)),
-          Expanded(child: Text(subtitle1,)),
-          Expanded(child: Text(subtitle2, )),
+          Expanded(child: Text(subtitle1,style: TextStyle(fontSize: 12),)),
+          Expanded(child: Text(subtitle2,style: TextStyle(fontSize: 12) )),
         ],
       ),
     );

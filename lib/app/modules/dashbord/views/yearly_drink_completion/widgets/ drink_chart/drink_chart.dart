@@ -1,0 +1,139 @@
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../../utils/App_Color/app_color.dart';
+
+class YearlyDrinkChart extends StatelessWidget {
+  const YearlyDrinkChart({super.key});
+
+  final List<double> drinkPercentages = const [
+    0,
+    60,
+    85,
+    85,
+    40,
+    45,
+    0,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 1.2,
+      child: LineChart(
+        LineChartData(
+          maxY: 100,
+          minY: 0,
+          gridData: const FlGridData(show: false),
+          borderData: FlBorderData(show: false),
+          titlesData: FlTitlesData(
+            topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+            rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+            leftTitles: AxisTitles(
+              sideTitles: SideTitles(
+                showTitles: true,
+                reservedSize: 40.w,
+                interval: 20,
+                getTitlesWidget: (value, meta) {
+                  return Text(
+                    '${value.toInt()}%',
+                    style: TextStyle(color: Colors.black54, fontSize: 13.sp),
+                  );
+                },
+              ),
+            ),
+            bottomTitles: AxisTitles(
+              sideTitles: SideTitles(
+                showTitles: true,
+                getTitlesWidget: (value, meta) {
+                  const days = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+
+                  ;
+                  if (value.toInt() >= 0 && value.toInt() < days.length) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        days[value.toInt()],
+                        style: const TextStyle(fontSize: 12),
+                      ),
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+            ),
+          ),
+          lineBarsData: [
+            LineChartBarData(
+              spots: drinkPercentages.asMap().entries.map((entry) {
+                return FlSpot(entry.key.toDouble(), entry.value);
+              }).toList(),
+              isCurved: true,
+              color: const Color(0xFF4A90E2),
+              barWidth: 3,
+              dotData: FlDotData(
+                show: true,
+                getDotPainter: (spot, percent, barData, index) {
+                  bool isHighlighted = index == 2;
+                  return FlDotCirclePainter(
+                    radius: isHighlighted ? 6 : 4,
+                    color: isHighlighted
+                        ? const Color(0xFF4A90E2)
+                        : Colors.white,
+                    strokeWidth: 2,
+                    strokeColor: const Color(0xFF4A90E2),
+                  );
+                },
+              ),
+              belowBarData: BarAreaData(
+                show: true,
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xFF9FD1FF).withOpacity(0.3),
+                    const Color(0xFF9FD1FF).withOpacity(0.0),
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
+            ),
+          ],
+          lineTouchData: LineTouchData(
+            enabled: true,
+            touchTooltipData: LineTouchTooltipData(
+              getTooltipColor: (touchedSpot) => Colors.white,
+              tooltipBorder: BorderSide(
+                color: AppColor.primarryColor,
+                width: 2,
+              ),
+              getTooltipItems: (touchedSpots) {
+                return touchedSpots.map((spot) {
+                  if (spot.x == 2) {
+                    return LineTooltipItem(
+                      '60%',
+                      const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    );
+                  }
+                  return null;
+                }).toList();
+              },
+            ),
+            getTouchedSpotIndicator: (barData, spotIndexes) {
+              return spotIndexes.map((index) {
+                return TouchedSpotIndicatorData(
+                  FlLine(color: Colors.transparent),
+                  FlDotData(show: false),
+                );
+              }).toList();
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}

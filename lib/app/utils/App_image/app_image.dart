@@ -37,11 +37,11 @@ class achivment{
   static const String Weekly_Legend= 'assets/achivmentIcon/Weekly_Legend.png';
 }
 class achImg{
-  static const String Hero= 'assets/achivmentIcon/LHero.png';
+  static const String Hero= 'assets/achivmentImg/hero.png';
   static const String AquaSovereign= 'assets/achivmentImg/aqua.png';
   static const String cool= 'assets/achivmentImg/cool.png';
   static const String early= 'assets/achivmentImg/early_bird_elite .png';
-  static const String fristVectory= 'assets/achivmentIcon/fristVectory.png';
+  static const String fristVectory= 'assets/achivmentImg/frist_vactor.png';
   static const String Immortal= 'assets/achivmentImg/immortal].png';
   static const String perfect= 'assets/achivmentImg/perfect_month.png';
   static const String weekly= 'assets/achivmentImg/week_warrior.png';

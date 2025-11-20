@@ -23,181 +23,183 @@ class Subscription extends StatelessWidget {
       ),
       body:  Padding(
         padding: const EdgeInsets.all(20),
-        child:  Column(
-          children: [
-            Container(
-              height: 309.h,
-              width: 335.w,
-              decoration: BoxDecoration(
+        child:  SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
 
-                color: AppColor.cardcolor,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 34.h),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Free Trial',style: AppTextStyles.title16_w800(color: AppColor.primarryColor),),
-                            Text('7 Days Full Access',style: AppTextStyles.title10_w500(),),
-                          ],
-                        ),
-                        Container(
-                          height:30.h ,
-                          width: 53.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(34),
-                            color: Color(0xffDEEFFF),
+                width: 335.w,
+                decoration: BoxDecoration(
 
+                  color: AppColor.cardcolor,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 34.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Free Trial',style: AppTextStyles.title16_w800(color: AppColor.primarryColor),),
+                              Text('7 Days Full Access',style: AppTextStyles.title10_w500(),),
+                            ],
                           ),
-                          child: Center(child: Text('FREE',style: AppTextStyles.title14_w500(color: AppColor.primarryColor),)),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 20.h,),
+                          Container(
+                            height:30.h ,
+                            width: 53.w,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(34),
+                              color: Color(0xffDEEFFF),
 
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.primarryColor,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Basic water logging')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
+                            ),
+                            child: Center(child: Text('FREE',style: AppTextStyles.title14_w500(color: AppColor.primarryColor),)),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 20.h,),
 
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.primarryColor,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Daily progress tracking')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.primarryColor,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Simple hydration goals')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.primarryColor,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Recent activity view')
-                          ],
-                        ),
-                        SizedBox(height: 30.h,),
-                        CustomButton(
-                          title: "Start Free Trial",
-                          onpress: (){},
-                          borderRadius: BorderRadius.circular(10),
-                        )
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.primarryColor,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Basic water logging')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
 
-                      ],
-                    )
-                  ],
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.primarryColor,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Daily progress tracking')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.primarryColor,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Simple hydration goals')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.primarryColor,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Recent activity view')
+                            ],
+                          ),
+                          SizedBox(height: 30.h,),
+                          CustomButton(
+                            title: "Start Free Trial",
+                            onpress: (){},
+                            borderRadius: BorderRadius.circular(10),
+                          )
+
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 30.h,),
-            Container(
-              height: 309.h,
-              width: 335.w,
-              decoration: BoxDecoration(
+              SizedBox(height: 30.h,),
+              Container(
 
-                color: AppColor.cardcolor,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 34.h),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Premium Monthly',style: AppTextStyles.title16_w800(color: Color(0xffFDC109)),),
-                            Text('Full access to all features',style: AppTextStyles.title10_w500(),),
-                          ],
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Free Trial',style: AppTextStyles.title16_w800(color: Color(0xffFDC109),),),
-                            Text('/month',style: AppTextStyles.title10_w500())
-                          ],
-                        ),
+                width: 335.w,
+                decoration: BoxDecoration(
 
-                      ],
-                    ),
-                    SizedBox(height: 20.h,),
+                  color: AppColor.cardcolor,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 34.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Premium Monthly',style: AppTextStyles.title16_w800(color: Color(0xffFDC109)),),
+                              Text('Full access to all features',style: AppTextStyles.title10_w500(),),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Free Trial',style: AppTextStyles.title16_w800(color: Color(0xffFDC109),),),
+                              Text('/month',style: AppTextStyles.title10_w500())
+                            ],
+                          ),
 
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.amber,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Basic water logging')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
+                        ],
+                      ),
+                      SizedBox(height: 20.h,),
 
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.amber,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Daily progress tracking')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.amber,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Simple hydration goals')
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
-                        Row(
-                          children: [
-                            Icon(Icons.check_sharp,color: AppColor.amber,),
-                            SizedBox( width: 5.25.w,),
-                            Text('Recent activity view')
-                          ],
-                        ),
-                        SizedBox(height: 30.h,),
-                        CustomButton(
-                          colors: Color(0xffFDC109),
-                          title: "Choose Monthly Plan",
-                          onpress: (){},
-                          borderRadius: BorderRadius.circular(10),
-                        )
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.amber,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Basic water logging')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
 
-                      ],
-                    )
-                  ],
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.amber,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Daily progress tracking')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.amber,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Simple hydration goals')
+                            ],
+                          ),
+                          SizedBox(height: 7.h,),
+                          Row(
+                            children: [
+                              Icon(Icons.check_sharp,color: AppColor.amber,),
+                              SizedBox( width: 5.25.w,),
+                              Text('Recent activity view')
+                            ],
+                          ),
+                          SizedBox(height: 30.h,),
+                          CustomButton(
+                            colors: Color(0xffFDC109),
+                            title: "Choose Monthly Plan",
+                            onpress: (){},
+                            borderRadius: BorderRadius.circular(10),
+                          )
+
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
 
 
-          ],
+            ],
+          ),
         )
       ),
     );

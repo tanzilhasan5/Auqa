@@ -50,108 +50,110 @@ class _RemindersState extends State<Reminders>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 217.h,
-            width: 374.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25.r),
-              color: AppColor.cardcolor,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(19),
-              child: Column(
-                children: [
-                  SizedBox(height: 44.h),
-                  Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () => Navigator.pop(context),
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: AppColor.primarryColor,
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Container(
+              height: 217.h,
+              width: 374.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.r),
+                color: AppColor.cardcolor,
+              ),
+              child: Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 19.w),
+                child: Column(
+                  children: [
+                    SizedBox(height: 20.h),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: AppColor.primarryColor,
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 108.5.w),
-                      Text('Reminders', style: AppTextStyles.title26_w600()),
-                    ],
-                  ),
-                  SizedBox(height: 35.h),
-                  TabBar(
-                    controller: _tabController,
-                    indicatorColor: AppColor.primarryColor,
-                    labelColor: AppColor.primarryColor,
-                    unselectedLabelColor: Colors.grey,
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16.sp,
+                        SizedBox(width:90.w),
+                        Text('Reminders', style: AppTextStyles.title26_w600()),
+                      ],
                     ),
-                    unselectedLabelStyle: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16.sp,
+                    SizedBox(height: 35.h),
+                    TabBar(
+                      controller: _tabController,
+                      indicatorColor: AppColor.primarryColor,
+                      labelColor: AppColor.primarryColor,
+                      unselectedLabelColor: Colors.grey,
+                      labelStyle: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16.sp,
+                      ),
+                      unselectedLabelStyle: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                      ),
+                      tabs: [
+                        AnimatedBuilder(
+                          animation: _tabController,
+                          builder: (context, _) {
+                            bool isSelected = _tabController.index == 0;
+                            return Tab(
+                              icon: CircleAvatar(
+                                backgroundColor:
+                                isSelected ? Colors.red : Color(0xffB2B2B2),
+                                child: ImageIcon(
+                                  AssetImage(Icn.reminders),
+                                  size: 24.sp,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              text: 'Reminders off',
+                            );
+                          },
+                        ),
+                        AnimatedBuilder(
+                          animation: _tabController,
+                          builder: (context, _) {
+                            bool isSelected = _tabController.index == 1;
+                            return Tab(
+                              icon: CircleAvatar(
+                                backgroundColor: isSelected
+                                    ? AppColor.primarryColor
+                                    : Color(0xffB2B2B2),
+                                child: ImageIcon(
+                                  AssetImage(Icn.reminders),
+                                  size: 24.sp,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              text: 'Auto reminders',
+                            );
+                          },
+                        ),
+                              ],
                     ),
-                    tabs: [
-                      AnimatedBuilder(
-                        animation: _tabController,
-                        builder: (context, _) {
-                          bool isSelected = _tabController.index == 0;
-                          return Tab(
-                            icon: CircleAvatar(
-                              backgroundColor:
-                              isSelected ? Colors.red : Color(0xffB2B2B2),
-                              child: ImageIcon(
-                                AssetImage(Icn.reminders),
-                                size: 24.sp,
-                                color: Colors.white,
-                              ),
-                            ),
-                            text: 'Reminders off',
-                          );
-                        },
-                      ),
-                      AnimatedBuilder(
-                        animation: _tabController,
-                        builder: (context, _) {
-                          bool isSelected = _tabController.index == 1;
-                          return Tab(
-                            icon: CircleAvatar(
-                              backgroundColor: isSelected
-                                  ? AppColor.primarryColor
-                                  : Color(0xffB2B2B2),
-                              child: ImageIcon(
-                                AssetImage(Icn.reminders),
-                                size: 24.sp,
-                                color: Colors.white,
-                              ),
-                            ),
-                            text: 'Auto reminders',
-                          );
-                        },
-                      ),
-                            ],
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 30.h),
-          Expanded(
-            child: TabBarView(
-              controller: _tabController,
-              children: [_buildRemindersList(), _buildRemindersList()],
+            SizedBox(height: 30.h),
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [_buildRemindersList(), _buildRemindersList()],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+        floatingActionButton: _tabController.index == 0
+            ? FloatingActionButton(
+          onPressed: _addReminder,
+          backgroundColor: AppColor.primarryColor,
+          child: Icon(Icons.add, color: Colors.white, size: 30.sp),
+        )
+            : null,
       ),
-      floatingActionButton: _tabController.index == 0
-          ? FloatingActionButton(
-        onPressed: _addReminder,
-        backgroundColor: AppColor.primarryColor,
-        child: Icon(Icons.add, color: Colors.white, size: 30.sp),
-      )
-          : null,
     );
   }
 

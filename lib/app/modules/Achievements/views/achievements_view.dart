@@ -40,7 +40,7 @@ class AchievementsView extends GetView<AchievementsController> {
           ),
           SizedBox(height: 30,),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(8),
             child:
             GridView.builder(
               physics: NeverScrollableScrollPhysics(),
@@ -50,7 +50,7 @@ class AchievementsView extends GetView<AchievementsController> {
                 crossAxisCount: 3,
                 crossAxisSpacing: 12.w,
                 mainAxisSpacing: 25.h,
-                childAspectRatio: 0.9,
+                childAspectRatio: 0.78,
               ),
               itemBuilder: (context, index) {
                 final item = controller.people[index];

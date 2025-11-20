@@ -65,30 +65,33 @@ class HistoryCalendar extends StatelessWidget {
 
 
   Widget _buildCurrentWeek(HistoryCalendarController c) {
+
     final today = DateTime.now();
     final startOfWeek = today.subtract(Duration(days: today.weekday - 1));
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 10,),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List.generate(7, (i) {
           final date = startOfWeek.add(Duration(days: i));
           final dayData = c.getDayData(date.year, date.month, date.day);
 
-          return GestureDetector(
-            onTap: () {
-              c.selectedMonth.value = DateTime(date.year, date.month); // মাস চেঞ্জ
-              c.selectDay(date.day);
-            },
-            child: Obx(() => CalendarDayWidget(
-              day: date.day,
-              dayData: dayData,
-              isSelected: c.selectedDay.value == date.day &&
-                  c.selectedMonth.value.month == date.month &&
-                  c.selectedMonth.value.year == date.year,
-              isLarge: true,
-            )),
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                c.selectedMonth.value = DateTime(date.year, date.month);
+                c.selectDay(date.day);
+              },
+              child: Obx(() => CalendarDayWidget(
+                day: date.day,
+                dayData: dayData,
+                isSelected: c.selectedDay.value == date.day &&
+                    c.selectedMonth.value.month == date.month &&
+                    c.selectedMonth.value.year == date.year,
+                isLarge: true,
+              )),
+            ),
           );
         }),
       ),
@@ -105,7 +108,7 @@ class HistoryCalendar extends StatelessWidget {
       return GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 7,
           childAspectRatio: 1.0,
