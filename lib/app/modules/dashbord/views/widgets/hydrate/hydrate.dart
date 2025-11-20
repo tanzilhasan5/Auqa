@@ -25,7 +25,7 @@ class Hydrate extends StatelessWidget {
           maxY: 2.5,
 
 
-          minY: 0,
+          minY: 0.5,
           gridData: const FlGridData(show: false),
           borderData: FlBorderData(show: false),
           titlesData: FlTitlesData(
@@ -38,7 +38,7 @@ class Hydrate extends StatelessWidget {
                 interval: 0.5,
                 getTitlesWidget: (value, meta) {
                   return Text(
-                    '${value.toInt()}L',
+                    '${value.toStringAsFixed(1)}L',  // Changed from value.toInt() to value.toStringAsFixed(1)
                     style: TextStyle(color: Colors.black54, fontSize: 13.sp),
                   );
                 },

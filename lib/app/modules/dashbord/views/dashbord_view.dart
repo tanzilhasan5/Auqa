@@ -55,6 +55,7 @@ class DashbordView extends GetView<DashbordController> {
                     ),
                   )),
               SizedBox(height: 30.h,),
+              ///<<<<Hydrate>>>>>///
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -80,6 +81,7 @@ class DashbordView extends GetView<DashbordController> {
                     ),
                   )),
               SizedBox(height: 30.h,),
+          ///<<<<<<<Drink Type>>>>>>>/////
           Container(
 
             height: 234.h,
