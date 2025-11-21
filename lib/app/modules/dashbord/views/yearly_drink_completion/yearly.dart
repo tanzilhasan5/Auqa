@@ -1,4 +1,4 @@
-import 'package:aqua/app/modules/dashbord/views/yearly_drink_completion/widgets/%20drink_chart/drink_chart.dart';
+import 'package:aqua/app/modules/dashbord/views/yearly_drink_completion/widgets/drink_chart/drink_chart.dart';
 import 'package:aqua/app/modules/dashbord/views/yearly_drink_completion/widgets/hydrate_chart/hydrate_chart.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';

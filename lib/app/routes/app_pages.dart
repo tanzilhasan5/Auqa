@@ -1,4 +1,3 @@
-import 'package:aqua/app/modules/Achievements/views/%20weeklyLegend/weekly_Legend.dart';
 import 'package:aqua/app/modules/Achievements/views/Hero/hero.dart';
 import 'package:aqua/app/modules/Achievements/views/Immortal/immortal.dart';
 import 'package:aqua/app/modules/Achievements/views/PerfectMonth/perfectMonth.dart';
@@ -12,6 +11,7 @@ import '../modules/Achievements/bindings/achievements_binding.dart';
 import '../modules/Achievements/views/achievements_view.dart';
 import '../modules/Achievements/views/coolRefresher/cool_refresher.dart';
 import '../modules/Achievements/views/frist_vectory/frist_vectory.dart';
+import '../modules/Achievements/views/weeklyLegend/weekly_Legend.dart';
 import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/DailyGoal/daily_Goal.dart';
 import '../modules/account/views/DailyGoal/edit_gole.dart';
