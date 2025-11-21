@@ -42,6 +42,10 @@ dependencies:
   flutter_svg: ^1.1.6
   fl_chart: ^1.1.1
   table_calendar: ^3.2.0
+  intl:
+  image_picker: ^1.2.1
+  carousel_slider: ^5.1.1
+  pinput: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +76,8 @@ flutter:
     - assets/achivmentIcon/
     - assets/achivmentImg/
     - assets/svgIcon/
+    - assets/images/
+    - assets/icons/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
