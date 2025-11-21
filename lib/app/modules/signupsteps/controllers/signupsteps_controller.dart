@@ -1,3 +1,4 @@
+import 'package:aqua/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class SignupstepsController extends GetxController {
@@ -133,6 +134,6 @@ class SignupstepsController extends GetxController {
   // Finish onboarding
   void finishOnboarding() {
     // Navigate to main app or save preferences
-   Get.offAllNamed('/home',parameters: {'passMlLavel': '2500'});
+   Get.offAllNamed(Routes.MAIN_BOTTOM_NAV_BAR,parameters: {'passMlLavel': '2500'});
   }
 }

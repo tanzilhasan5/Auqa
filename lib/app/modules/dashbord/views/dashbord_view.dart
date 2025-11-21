@@ -101,7 +101,6 @@ class _DashbordViewState extends State<DashbordView>
       body: Column(
         children: [
           Container(
-            height: 250.h,
             width: 374.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25.r),

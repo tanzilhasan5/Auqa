@@ -75,7 +75,6 @@ class Yearly extends StatelessWidget {
             ///<<<<<<<Drink Type>>>>>>>/////
             Container(
 
-              height: 234.h,
               width: 336.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),

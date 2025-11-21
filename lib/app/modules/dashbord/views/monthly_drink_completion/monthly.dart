@@ -76,7 +76,6 @@ class Monthly extends StatelessWidget {
             ///<<<<<<<Drink Type>>>>>>>/////
             Container(
 
-              height: 234.h,
               width: 336.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -94,7 +93,6 @@ class Monthly extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 150.h,
                             width: 150.w,
                             child: AspectRatio(
                               aspectRatio: 1.5,
