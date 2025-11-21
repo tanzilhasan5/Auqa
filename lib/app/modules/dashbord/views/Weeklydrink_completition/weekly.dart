@@ -27,7 +27,7 @@ class Weekly extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: AppColor.cardcolor,
                 ),
-                height: 339.h,
+
                 width: 336.w,
                 child: Padding(
                   padding: const EdgeInsets.all(12),
@@ -53,7 +53,6 @@ class Weekly extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: AppColor.cardcolor,
                 ),
-                height: 339.h,
                 width: 336.w,
                 child: Padding(
                   padding: const EdgeInsets.all(12),

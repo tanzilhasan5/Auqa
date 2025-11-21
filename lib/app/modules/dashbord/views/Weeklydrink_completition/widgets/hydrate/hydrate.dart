@@ -108,6 +108,6 @@ class Hydrate extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }

@@ -39,7 +39,7 @@ abstract class _Paths {
   static const EDITGOAl = '/EditGoal';
   static const PRIVACYPOLICY = '/PRIVACYPOLICY';
   static const SUBSCRIPTION = '/SUBSCRIPTION';
-/*  static const SELECTIONSHEET = '/gender_selectio';*/
+
   static const ACHIEVEMENTS = '/achievements';
   static const frist_vectory = '/frist_vectory';
   static const CoolRefresher = '/CoolRefresher';

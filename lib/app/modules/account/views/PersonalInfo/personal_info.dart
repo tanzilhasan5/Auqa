@@ -44,7 +44,6 @@ class _PersonalInfoState extends State<PersonalInfo> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 20),
         child: Container(
-          height: 360.h,
           width: 336.w,
           decoration: BoxDecoration(
             color: AppColor.cardcolor,

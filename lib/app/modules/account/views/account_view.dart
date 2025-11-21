@@ -18,7 +18,6 @@ class AccountView extends GetView<AccountController> {
         body: Column(
             children: [
           Container(
-            height: 209.h,
             width: 374.w,
             decoration: BoxDecoration(
               color: AppColor.cardcolor,
@@ -30,30 +29,35 @@ class AccountView extends GetView<AccountController> {
                 Text('Account',style: AppTextStyles.title26_w600(),),
                 SizedBox(height: 35.h,),
 
-                Container(
-                  width: 336.w,
-                  decoration: BoxDecoration(
-                    color:AppColor.primarryColor,
-                    borderRadius: BorderRadius.circular(64),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.5, vertical: 15),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: AppColor.cardcolor,
-                          child: Image(image: AssetImage(Img.upgrade),fit: BoxFit.cover,),
-                        ),
-                        SizedBox(width: 19.w,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Upgrade Plan Now!',style: AppTextStyles.title16_w600(color: Colors.white),),
-                            Text('Unlock advanced hydration \n tracking and insights',style: AppTextStyles.title12_w400(color: Colors.white),)
-                          ],
-                        )
+                InkWell(
+                  onTap: (){
+                    Get.toNamed(Routes.SUBSCRIPTION);
+                  },
+                  child: Container(
+                    width: 336.w,
+                    decoration: BoxDecoration(
+                      color:AppColor.primarryColor,
+                      borderRadius: BorderRadius.circular(64),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24.5, vertical: 15),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: AppColor.cardcolor,
+                            child: Image(image: AssetImage(Img.upgrade),fit: BoxFit.cover,),
+                          ),
+                          SizedBox(width: 19.w,),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Upgrade Plan Now!',style: AppTextStyles.title16_w600(color: Colors.white),),
+                              Text('Unlock advanced hydration \n tracking and insights',style: AppTextStyles.title12_w400(color: Colors.white),)
+                            ],
+                          )
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -161,7 +165,7 @@ class AccountView extends GetView<AccountController> {
       builder: (context) => StatefulBuilder(
         builder: (context, setModalState) {
           return Container(
-            height: 265.h,
+            height: 280.h,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
