@@ -225,7 +225,7 @@ class AccountView extends GetView<AccountController> {
                       SizedBox(width: 10.h,),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () => Get.back(),
+                          onPressed: () => Get.offAllNamed(Routes.LOGIN),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColor.primarryColor,
                             elevation: 0,
