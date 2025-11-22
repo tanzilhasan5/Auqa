@@ -5,17 +5,8 @@ import 'package:aqua/app/utils/Text_Style/text_Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ReminderModel {
-  String time;
-  List<String> days;
-  bool isActive;
+import '../model/model.dart';
 
-  ReminderModel({
-    required this.time,
-    required this.days,
-    required this.isActive,
-  });
-}
 
 class Reminders extends StatefulWidget {
   const Reminders({super.key});

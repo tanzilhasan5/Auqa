@@ -154,7 +154,6 @@ class AppPages {
     GetPage(
       name: _Paths.Reminders,
       page: () =>  Reminders(),
-      binding: RemindersBinding(),
 
     ),
     GetPage(

@@ -1,3 +1,4 @@
+/*
 // features/reminders/controller/reminders_controller.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -45,4 +46,4 @@ class RemindersController extends GetxController
   void showAddReminderBottomSheet() {
     Get.bottomSheet(AddReminderBottomSheet(), isScrollControlled: true);
   }
-}
+}*/
