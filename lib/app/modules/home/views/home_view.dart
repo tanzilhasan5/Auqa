@@ -472,7 +472,7 @@ class CongratulationsScreen extends StatelessWidget {
     );
   }
 
-  void _showShareDialog(BuildContext context) {
+ void _showShareDialog(BuildContext context) {
     final shareOptions = [
       {'icon': Icons.link, 'label': 'Copy url', 'color': Colors.grey.shade700},
       {'icon': Icons.send, 'label': 'Direct', 'color': Colors.purple},

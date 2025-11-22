@@ -561,3 +561,93 @@ class _RemindersState extends State<Reminders>
     );
   }
 }
+// features/reminders/view/reminders_screen.dart
+// features/reminders/view/reminders_screen.dart
+/*
+import 'package:aqua/app/modules/account/views/widgets/custom_switch.dart';
+import 'package:aqua/app/utils/App_Color/app_color.dart';
+import 'package:aqua/app/utils/App_image/app_image.dart';
+import 'package:aqua/app/utils/Text_Style/text_Style.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
+import '../controller/remember_controller.dart';
+
+
+class RemindersScreen extends StatelessWidget {
+  const RemindersScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.find<RemindersController>();
+
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            _buildHeaderCard(controller),
+            SizedBox(height: 30.h),
+            Expanded(
+              child: TabBarView(
+                controller: controller.tabController,
+                children: [_buildList(controller), _buildList(controller)],
+              ),
+            ),
+          ],
+        ),
+        floatingActionButton: Obx(() => controller.currentTabIndex.value == 0
+            ? FloatingActionButton(
+          onPressed: controller.showAddReminderBottomSheet,
+          backgroundColor: AppColor.primarryColor,
+          child: Icon(Icons.add, color: Colors.white, size: 30.sp),
+        )
+            : const SizedBox.shrink()),
+      ),
+    );
+  }
+
+  Widget _buildHeaderCard(RemindersController c) => Container(); // Same as before (TabBar + title)
+
+  Widget _buildList(RemindersController c) {
+    return Obx(() => ListView.builder(
+      padding: EdgeInsets.symmetric(horizontal: 19.w, vertical: 20.h),
+      itemCount: c.reminders.length,
+      itemBuilder: (_, i) {
+        final r = c.reminders[i];
+        return Padding(
+          padding: EdgeInsets.only(bottom: 16.h),
+          child: Dismissible(
+            key: Key(r.uniqueKey),
+            direction: DismissDirection.endToStart,
+            background: Container(color: Colors.red, alignment: Alignment.centerRight, padding: EdgeInsets.only(right: 20.w), child: Icon(Icons.delete, color: Colors.white)),
+            onDismissed: (_) => c.deleteReminder(i),
+            child: Container(
+              height: 89.h,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.r), color: AppColor.cardcolor),
+              padding: EdgeInsets.all(20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(r.time, style: AppTextStyles.title20_w500()),
+                      Text(r.days.join(' '), style: AppTextStyles.title12_w600()),
+                    ],
+                  ),
+                  CustomSwitch(
+                    title: '',
+                    initialValue: r.isActive,
+                    onChanged: (v) => c.toggleReminder(i, v),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    ));
+  }
+}*/

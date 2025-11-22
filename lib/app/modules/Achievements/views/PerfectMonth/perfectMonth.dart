@@ -16,7 +16,6 @@ class PerfectMonth extends StatelessWidget {
           subtitle: 'Perfect Month',
           descriptionLine1: 'Unstoppable! 30 days of perfect hydration',
           descriptionLine2: '— amazing work!',
-          onShare: (){},
         ),
       ),
     );

@@ -389,7 +389,7 @@ class SignupView extends GetView<SignupController> {
                           color: const Color(0xff369FFF),
                         ),
                         recognizer: TapGestureRecognizer()
-                          ..onTap = () => Get.offAllNamed('/login'),
+                          ..onTap = () => Get.offAllNamed(Routes.LOGIN),
                       ),
                     ],
                   ),

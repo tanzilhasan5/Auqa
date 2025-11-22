@@ -16,7 +16,6 @@ class EarlyBirdElite extends StatelessWidget {
           subtitle: 'Early Bird Elite ',
           descriptionLine1: 'Awesome! You’ve started your days the ',
           descriptionLine2: 'right way — hydrated!',
-          onShare: (){},
         ),
       ),
     );

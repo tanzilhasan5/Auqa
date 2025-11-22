@@ -16,7 +16,6 @@ class CoolRefresher extends StatelessWidget {
           subtitle: 'Cool Refresher ',
           descriptionLine1: 'Ice Legend! 10 chilled water intakes — your  ',
           descriptionLine2: 'coolness is unmatched!',
-          onShare: (){},
         ),
       ),
     );

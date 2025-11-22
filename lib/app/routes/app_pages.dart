@@ -4,7 +4,8 @@ import 'package:aqua/app/modules/Achievements/views/PerfectMonth/perfectMonth.da
 import 'package:aqua/app/modules/Achievements/views/WeekWarrior/weekWarrior.dart';
 import 'package:aqua/app/modules/Achievements/views/aquaSovereign/aquaSovereign.dart';
 import 'package:aqua/app/modules/Achievements/views/earlyBirdElite/earlyBirdElite.dart';
-import 'package:aqua/app/modules/account/views/Reminders/reminders.dart';
+import 'package:aqua/app/modules/account/views/Reminders/binding/binding.dart';
+import 'package:aqua/app/modules/account/views/Reminders/view/reminders.dart';
 import 'package:get/get.dart';
 
 import '../modules/Achievements/bindings/achievements_binding.dart';
@@ -153,6 +154,7 @@ class AppPages {
     GetPage(
       name: _Paths.Reminders,
       page: () =>  Reminders(),
+      binding: RemindersBinding(),
 
     ),
     GetPage(

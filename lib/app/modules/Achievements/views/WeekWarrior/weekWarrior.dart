@@ -16,7 +16,6 @@ class WeekWarrior extends StatelessWidget {
           subtitle: 'Frist Victory',
           descriptionLine1: 'Amazing! You’ve stayed hydrated for',
           descriptionLine2: '7 days straight!',
-          onShare: (){},
         ),
       ),
     );

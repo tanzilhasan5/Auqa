@@ -16,7 +16,6 @@ class Immortal extends StatelessWidget {
           subtitle: 'Immortal',
           descriptionLine1: 'Unbelievable! 365 days straight —',
           descriptionLine2: 'dedication is unmatched!',
-          onShare: (){},
         ),
       ),
     );

@@ -16,11 +16,7 @@ class SplashView extends GetView<SplashController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              'assets/icons/splash.svg',
-              height: 165.82.h,
-              width: 139.w,
-            ),
+            Image(image: AssetImage('assets/icons/img.png')),
         
             SizedBox(height: 30.h),
             Text(
@@ -38,5 +34,3 @@ class SplashView extends GetView<SplashController> {
     );
   }
 }
-
-/* Image(image: AssetImage('assets/icons/img.png')),*/

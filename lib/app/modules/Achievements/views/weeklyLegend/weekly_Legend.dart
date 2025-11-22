@@ -16,7 +16,6 @@ class WeeklyLegend extends StatelessWidget {
           subtitle: ' Weekly Legend',
           descriptionLine1: 'Consistency Champ! 4 weeks of daily goals',
           descriptionLine2: '— you crushed it!',
-          onShare: (){},
         ),
       ),
     );

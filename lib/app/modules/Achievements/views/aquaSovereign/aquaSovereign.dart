@@ -16,7 +16,6 @@ class AquaSovereign extends StatelessWidget {
           subtitle: 'Aqua Sovereign',
           descriptionLine1: 'Goal Machine! You’ve hit 200 total goals —',
           descriptionLine2: 'unstoppable energy!',
-          onShare: (){},
         ),
       ),
     );

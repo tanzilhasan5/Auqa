@@ -24,11 +24,7 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Column(
             children: [
               SizedBox(height: 100.h),
-              SvgPicture.asset(
-                'assets/icons/logo1.svg',
-                height: 68.h,
-                width: 57.w,
-              ),
+              Image(image: AssetImage('assets/icons/img.png')),
               SizedBox(height: 60.h),
               Text(
                 "Let's Get Started!",

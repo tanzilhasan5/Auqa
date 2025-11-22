@@ -16,7 +16,6 @@ class Hero extends StatelessWidget {
           subtitle: '50L Hero',
           descriptionLine1: 'Awesome Work! 50 liters of pure',
           descriptionLine2: 'consistency — well done!',
-          onShare: (){},
         ),
       ),
     );

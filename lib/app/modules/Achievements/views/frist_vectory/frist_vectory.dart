@@ -16,7 +16,6 @@ class FristVectory extends StatelessWidget {
           subtitle: 'Week Warrior',
           descriptionLine1: 'Congratulations! You’ve logged your first water ',
           descriptionLine2: 'the journey begins!',
-          onShare: (){},
         ),
       ),
     );

@@ -8,7 +8,6 @@ class Achivment_details_card extends StatelessWidget {
   final String subtitle;
   final String descriptionLine1;
   final String descriptionLine2;
-  final VoidCallback onShare;
 
   const Achivment_details_card({
     super.key,
@@ -16,7 +15,7 @@ class Achivment_details_card extends StatelessWidget {
     required this.subtitle,
     required this.descriptionLine1,
     required this.descriptionLine2,
-    required this.onShare,
+
   });
 
   @override
@@ -64,12 +63,113 @@ class Achivment_details_card extends StatelessWidget {
         ),
         Spacer(),
         CustomButton(
-          onpress:onShare,
+          onpress:(){
+            _showShareDialog(context);
+          },
           borderRadius: BorderRadius.circular(36),
           title: 'Share',
         ),
         SizedBox(height: 20),
       ],
+    );
+  }
+  void _showShareDialog(BuildContext context) {
+    final shareOptions = [
+      {'icon': Icons.link, 'label': 'Copy link', 'color': const Color(0xFF8E8E93)},
+      {'icon': Icons.send, 'label': 'Direct', 'color': const Color(0xFF9C27B0)},
+      {'icon': Icons.telegram, 'label': 'Telegram', 'color': const Color(0xFF0088CC)},
+      {'icon': Icons.message, 'label': 'Messenger', 'color': const Color(0xFF006AFF)},
+      {'icon': Icons.flutter_dash, 'label': 'Twitter', 'color': const Color(0xFF1DA1F2)}, // Fixed icon
+      {'icon': Icons.sms, 'label': 'Messages', 'color': const Color(0xFF4CAF50)},
+      {'icon': Icons.more_horiz, 'label': 'More', 'color': const Color(0xFF8E8E93)},
+    ];
+
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (context) => Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Drag handle
+              const SizedBox(height: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  'Share',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(height: 24),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 0.8,
+                  ),
+                  itemCount: shareOptions.length,
+                  itemBuilder: (context, index) {
+                    final opt = shareOptions[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Get.back(); // Close bottom sheet
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: opt['color'] as Color,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              opt['icon'] as IconData,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            opt['label'] as String,
+                            style: const TextStyle(fontSize: 11),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+          
+              const SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () => Get.back(),
+                    child: const Text(
+                      'Cancel',
+                      style: TextStyle(fontSize: 16, color: Colors.black87),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
