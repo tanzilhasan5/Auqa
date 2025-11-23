@@ -8,6 +8,7 @@ class  Img{
   static const String coffee = 'assets/image/coffee.png';
   static const String upgrade = 'assets/image/upgrade.png';
   static const String berchartbg = 'assets/image/ber_chart_bg.png';
+  static const String botol = 'assets/image/img.png';
 
 }
 class Icn{

@@ -149,59 +149,14 @@ class WaterBottleWidget extends StatelessWidget {
             width: 150,
             height: 350,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.blue.shade300, width: 3),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                // Water fill with selected drink color
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  width: 144,
-                  height: 344 * controller.percentage,
-                  decoration: BoxDecoration(
-                    color: drinkColor.withOpacity(0.7),
-                    borderRadius: BorderRadius.circular(17),
-                  ),
-                ),
-              ],
-            ),
+            child:Image(image: AssetImage(Img.botol))
           ),
           // Bottle cap
-          Positioned(
-            top: -15,
-            child: Container(
-              width: 70,
-              height: 35,
-              decoration: BoxDecoration(
-                color: Colors.blue.shade700,
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
 
-
-              ),
-            ),
-          ),
           // Scale markers
-          Positioned(
-            right: -60,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: List.generate(6, (i) {
-                final ml = 1000 - (i * 200);
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 13),
-                  child: Row(
-                    children: [
-                      Container(width: 25, height: 1, color: Colors.grey.shade400),
-                      const SizedBox(width: 8),
-                      Text('$ml ml', style: TextStyle(color: Colors.grey.shade600, fontSize: 12)),
-                    ],
-                  ),
-                );
-              }),
-            ),
-          ),
+
         ],
       );
     });
@@ -361,7 +316,8 @@ class SwitchDrinkSheet extends StatelessWidget {
                           width: 3,
                         ),
                       ),
-                      child: Icon(
+                      child:
+                      Icon(
                         drink['icon'] as IconData,
                         color: drink['color'] as Color,
                         size: 32,
